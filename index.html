@@ -1,10 +1,11 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dealer Vehicle Details</title>
+  <title>Dealership Call Notes</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -52,7 +53,7 @@
   </style>
 </head>
 <body>
-  <h1>Dealer Vehicle Details</h1>
+  <h1>Dealership Call Notes</h1>
   <div class="form-container">
 
     <div class="field"><label>VIN</label><input id="vin"></div>
@@ -63,27 +64,25 @@
     <div class="field">
       <label>Transferring Plates</label>
       <select id="plates">
+        <option value="" selected></option>
         <option>Yes</option>
         <option>No</option>
       </select>
     </div>
-    <div class="field"><label>Current Odometer Reading</label><input id="odometer"></div>
 
     <div class="field">
       <label>First Owner</label>
       <select id="firstOwner">
+        <option value="" selected></option>
         <option>Yes</option>
         <option>No</option>
       </select>
     </div>
 
-    
-    <div class="field"><label>Effective Date</label><input id="effectiveDate" type="date"></div>
-    <div class="field"><label>Purchase Date</label><input id="purchaseDate" type="date"></div>
-    
     <div class="field">
       <label>Ownership Type</label>
       <select id="ownership">
+        <option value="" selected></option>
         <option>Finance</option>
         <option>Lease</option>
         <option>Owned</option>
@@ -93,8 +92,17 @@
     <div class="field"><label>Finance/Lease Company Name</label><input id="companyName"></div>
     <div class="field"><label>Finance/Lease Company Address</label><textarea id="companyAddress"></textarea></div>
 
-     <div class="field"><label>Dealer Email Address</label><input id="dealerEmail"></div>
-    
-      </div>
+    <div class="field"><label>Effective Date</label><input id="effectiveDate" type="date"></div>
+    <div class="field"><label>Purchase Date</label><input id="purchaseDate" type="date"></div>
+
+    <div class="field"><label>Dealer Email Address</label><input id="dealerEmail"></div>
+    <div class="field"><label>Current Odometer Reading</label><input id="odometer"></div>
+    <button onclick="clearForm()">Clear All Fields</button>
+  </div>
+
+
+  <script>
+    function clearForm() {
+      document.querySelectorAll('input, textarea
 </body>
 </html>
